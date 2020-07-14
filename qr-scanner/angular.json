@@ -1,0 +1,47 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "qr-scanner": {
+      "projectType": "library",
+      "root": "projects/qr-scanner",
+      "sourceRoot": "projects/qr-scanner/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/qr-scanner/tsconfig.lib.json",
+            "project": "projects/qr-scanner/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/qr-scanner/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/qr-scanner/src/test.ts",
+            "tsConfig": "projects/qr-scanner/tsconfig.spec.json",
+            "karmaConfig": "projects/qr-scanner/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/qr-scanner/tsconfig.lib.json",
+              "projects/qr-scanner/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "qr-scanner"
+}
