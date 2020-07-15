@@ -1,9 +1,11 @@
 {
-  "name": "qr-scanner",
-  "version": "0.0.1",
+  "name": "@rebase-team/qr-scanner",
+  "version": "0.1.1",
   "peerDependencies": {
     "@angular/common": "^10.0.3",
-    "@angular/core": "^10.0.3"
+    "@angular/core": "^10.0.3",
+    "@ionic-native/core": "^5.27.0",
+    "@ionic-native/qr-scanner": "^5.27.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
