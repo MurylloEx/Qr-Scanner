@@ -41,6 +41,7 @@ export class QrScannerService {
             this.onScanDataFunc(text);
           }
           this.scanSub.unsubscribe();
+          this.isOpenned = false;
         });
         document.getElementsByTagName("body")[0].style.opacity = "0";
         this.qrScanner.resumePreview();
@@ -74,4 +75,9 @@ export class QrScannerService {
       this.isOpenned = false;
     }
   }
+
+  public IsScanning(){
+    return this.isOpenned;
+  }
+
 }
