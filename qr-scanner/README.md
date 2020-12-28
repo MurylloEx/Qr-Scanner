@@ -27,18 +27,16 @@ npm install @rebase-team/qr-scanner
 ```typescript
 import { AppComponent } from "./app.component";
 import { NgModule } from "@angular/core";
-import { AppRoutingModule } from "./app-routing.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { QrScannerService } from "@rebase-team/qr-scanner";
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 @NgModule({
-  declarations: [AppComponent, UpdateVersionComponent, WelcomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
-    AppRoutingModule
+    IonicModule.forRoot()
   ],
   providers: [
     QRScanner,
