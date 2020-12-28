@@ -70,10 +70,10 @@ export class HomePage {
       this.qrScanner.Close();
     });
     this.qrScanner.OnPermissionError(() => {	
-      this.customAlert.presentAlert('Problema de permissões', 'Não foi possível abrir a câmera para ler o QR-Code pois a permissão não foi habilitada.');	
+      console.log('Não foi possível abrir a câmera para ler o QR-Code pois a permissão não foi habilitada.');	
     });	
     this.qrScanner.OnUnknownError((err) => {	
-      this.customAlert.presentAlert('Erro desconhecido', 'Um problema ocorreu ao tentar abrir a câmera do celular para realizar a leitura do QR-Code.')	
+      console.log('Um problema ocorreu ao tentar abrir a câmera do celular para realizar a leitura do QR-Code.');
     });
     this.qrScanner.Scan();
   }
